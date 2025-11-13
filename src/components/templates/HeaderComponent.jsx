@@ -6,7 +6,7 @@ function HeaderComponent() {
     <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
       <div className="container">
         <Link className="navbar-brand fw-bold text-primary" to="/">
-          🛍️ Toko Informatika
+          🛍️ Inovasi Informatika
         </Link>
         <button 
           className="navbar-toggler" 
@@ -28,12 +28,12 @@ function HeaderComponent() {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/list-produk">
-                📦 Produk
+                📦 Inovasi
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/tambah-produk">
-                ➕ Tambah Produk
+                ➕ Tambah Inovasi
               </Link>
             </li>
             {/* <li className="nav-item">
