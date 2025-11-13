@@ -32,9 +32,9 @@ function ListInovasiComponent() {
     alert(JSON.stringify(item, null, 2));
   };
 
-  const handleDelete = async (id) => {
+  const handleDelete = async (id, judul) => {
     // Konfirmasi hapus
-    if (!window.confirm("Apakah Anda yakin ingin menghapus inovasi ini?")) {
+    if (!window.confirm(`Apakah Anda yakin ingin menghapus inovasi "${judul}"?`)) {
       return;
     }
     try {
@@ -98,7 +98,7 @@ function ListInovasiComponent() {
                           <button className="btn btn-sm btn-outline-warning">Edit</button>
                         </Link>
                         {item.ino_id ? (
-                          <button onClick={() => handleDelete(item.ino_id)} className="btn btn-sm btn-outline-danger">Hapus</button>
+                          <button onClick={() => handleDelete(item.ino_id, item.ino_judul)} className="btn btn-sm btn-outline-danger">Hapus</button>
                         ) : (
                           <button disabled title="ID tidak tersedia" className="btn btn-sm btn-outline-danger">Hapus</button>
                         )}
