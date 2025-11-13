@@ -49,17 +49,22 @@ function ListInovasiComponent() {
 
   return (
     <div className="container mt-4">
-      <h3>Daftar Inovasi</h3>
+      <div className="d-flex justify-content-between align-items-center mb-4">
+        <div>
+        <h3 align='left'>🛍️ Daftar Inovasi</h3>
+        <h4 style={{ paddingLeft: '16px' }}>Kelola inovasi Anda dengan mudah</h4>
+        </div>
 
-      <div style={{ marginBottom: 16 }}>
-        <Link to="/add-inovasi">
-          <button style={{ marginRight: 8 }} className="btn btn-primary">Tambah Inovasi</button>
-        </Link>
-        <button onClick={fetchInovasis} className="btn btn-success">Refresh</button>
+        <div style={{ marginBottom: 16 }}>
+          <Link to="/add-inovasi">
+            <button style={{ marginRight: 8 }} className="btn btn-light btn-outline-success">➕Tambah Inovasi</button>
+          </Link>
+          <button onClick={fetchInovasis} className="btn btn-outline-primary">🔄 Refresh</button>
+        </div>
+
+        {loading && <div>Loading...</div>}
+        {error && <div style={{ color: "red" }}>Error: {error}</div>}
       </div>
-
-      {loading && <div>Loading...</div>}
-      {error && <div style={{ color: "red" }}>Error: {error}</div>}
 
        <div className="card shadow-sm">
         <div className="card-body p-0">
